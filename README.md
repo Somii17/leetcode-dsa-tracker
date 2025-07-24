@@ -29,9 +29,11 @@ I started this journey because I want to:
 Each folder = 1 topic  
 Each file = 1 problem (with approach + comments)
 
-Platform: LeetCode
-Language: Java 
-Why This Repo?
+|Platform: LeetCode|
+|Language: Java| 
+
+
+Why Repo?
 Because being consistent in public builds accountability.
 Because every problem solved is one step closer to my dream.
 Because I’m not giving up anymore — and neither should you.
