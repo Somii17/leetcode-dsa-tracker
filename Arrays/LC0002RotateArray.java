@@ -1,3 +1,7 @@
+// ✅ Problem: https://leetcode.com/problems/rotate-array/
+// 💡 Approach: Reverse the entire array, then reverse the first k and last n-k elements
+// ⏱️ Time: O(n), Space: O(1)
+
 class Solution {
     public void rotate(int[] nums, int k) {
         int n = nums.length;
