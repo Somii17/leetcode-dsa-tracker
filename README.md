@@ -21,7 +21,7 @@ I started this journey because I want to:
 |------------|-------|
 | ✅ Solved  | 1     |
 | 🔜 Target  | 150   |
-| 🗓️ Daily Pace | 1 problem/day (for now) |
+| 🗓️ Daily Pace | atleast 1 problem/day |
 | 🗓️ Starting Date | 24 July 2025 |
 
 ---
