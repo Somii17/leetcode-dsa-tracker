@@ -3,4 +3,4 @@
 | #  | Problem Name       | Difficulty | Topic   | Status | 
 |----|--------------------|------------|---------|--------|
 | 1  | Two Sum            | Easy       | Array   | ✅ Done |
-| 2  |                    |            |         | ⏳      |      
+| 2  | Rotate Array       | Medium     | Array   |  ✅ Done |      
