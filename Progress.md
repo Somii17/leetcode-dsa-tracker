@@ -7,3 +7,4 @@
 | 3  | Remove Duplicates  | Easy       | Array   | ✅ Done |
 | 4  | MoveZeroes         | Easy       | Array   | ✅ Done |
 | 5  | MaximumSubarray    | Medium     | Array   | ✅ Done |
+| 6  | RotateMatrix       | Medium     | Array   | ✅ Done | 
