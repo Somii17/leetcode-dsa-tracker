@@ -19,7 +19,7 @@ I started this journey because I want to:
 
 | Status     | Count |
 |------------|-------|
-| ✅ Solved  | 3     |
+| ✅ Solved  | 5     |
 | 🔜 Target  | 150   |
 | 🗓️ Daily Pace | atleast 1 problem/day |
 | 🗓️ Starting Date | 24 July 2025 |
