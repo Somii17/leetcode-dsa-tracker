@@ -1,0 +1,51 @@
+// ✅ Problem: https://leetcode.com/problems/range-sum-query-2d-immutable/
+// 💡 Approach: Build a 2D prefix sum array. For every query, use inclusion-exclusion to calculate the region sum in O(1).
+// ⏱️ Time: Constructor - O(n * m), sumRegion - O(1), Space: O(n * m)
+
+class NumMatrix {
+    int[][] psum;
+
+    public NumMatrix(int[][] matrix) {
+        psum = new int[matrix.length][matrix[0].length];
+        int n= matrix.length;
+        int m = matrix[0].length;
+
+        for(int i=0; i<n ; i++){
+            for(int j=0 ; j<m; j++){
+                if(j==0){
+                    psum[i][j]=matrix[i][j];
+                }
+                else{
+                    psum[i][j]=psum[i][j-1]+matrix[i][j];
+                }
+            }
+        }
+            for(int j=0; j<m ;j++){
+               for(int i=1; i<n; i++){
+                     psum[i][j]=psum[i-1][j]+psum[i][j];
+            }
+        }
+        
+    }
+    
+    public int sumRegion(int row1, int col1, int row2, int col2) {
+             int x1= row1;
+             int x2=row2;
+             int y1= col1;
+             int y2=col2;
+
+             int sum=0;
+             sum = sum+ psum[x2][y2];
+             if((x1-1)>=0){
+                sum=sum-psum[x1-1][y2];
+             }   
+             if((y1-1)>=0){
+                sum= sum - psum[x2][y1-1];
+             }                
+             if((x1-1)>=0&&(y1-1)>=0){
+                sum=sum+ psum[x1-1][y1-1];
+             }
+             return sum;
+        
+    }
+}
