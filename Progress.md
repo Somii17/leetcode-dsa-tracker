@@ -8,3 +8,4 @@
 | 4  | MoveZeroes         | Easy       | Array   | ✅ Done |
 | 5  | MaximumSubarray    | Medium     | Array   | ✅ Done |
 | 6  | RotateMatrix       | Medium     | Array   | ✅ Done | 
+| 7  | RangeSumQuery2D    | Medium     | Array   | ✅ Done |
