@@ -1,0 +1,31 @@
+// ✅ Problem: https://leetcode.com/problems/first-missing-positive/
+// 💡 Approach: Place each number at its correct index using cyclic sort, then find the first mismatch.
+// ⏱️ Time: O(n), Space: O(1)
+class Solution {
+    public int firstMissingPositive(int[] nums) {
+        int n= nums.length;
+        int i=0;
+        while(i<n){
+            if(nums[i]<1 || nums[i]>n || i==nums[i]-1){
+                i++;
+            }
+            else{
+                int idx = nums[i]-1;
+                if(nums[idx]==nums[i]){
+                    i++;
+                }
+                else{
+                    int temp = nums[i];
+                    nums[i]=nums[idx];
+                    nums[idx]=temp;
+                }
+            }
+        }
+        for(i=0; i<n ;i++){
+            if(nums[i]!= i+1){
+                return i+1;
+            }
+        }
+        return n+1;
+    }
+}
