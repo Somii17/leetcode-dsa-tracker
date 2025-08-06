@@ -1,0 +1,37 @@
+https://leetcode.com/problems/next-greater-element-iii/
+class Solution {
+    public int nextGreaterElement(int n) {
+        char[] num = (n+"").toCharArray();
+        int idx=-1;
+        for(int i=num.length-2; i>=0 ; i--){
+            if(num[i]<num[i+1]){
+                idx=i;
+                break;
+            }
+        }
+        if(idx==-1){
+            return -1;
+        }
+        char val = num[idx];
+        int smallestidx = idx+1;
+
+        for(int i = idx+1 ; i<num.length ; i++){
+            if(num[i]>val && num[i]<= num[smallestidx]){
+                smallestidx= i;
+            }
+        }
+        char temp = num[idx];
+        num[idx]=num[smallestidx];
+        num[smallestidx]=temp;
+
+        Arrays.sort(num, idx+1, num.length);
+        long ans = Long.parseLong(new String(num));
+        if(ans>Integer.MAX_VALUE){
+            return -1;
+        }
+        else{
+            return (int)ans;
+        }
+        
+    }
+}
